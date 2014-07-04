@@ -39,6 +39,9 @@ $ vagrant box add dummy dummy_box/dummy.box
 Then create a Vagrantfile that looks like the following:
 
 ```
+
+ENV['VAGRANT_DEFAULT_PROVIDER'] = 'proxmox'
+
 Vagrant.configure('2') do |config|
 
 	config.vm.provider :proxmox do |proxmox|
